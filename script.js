@@ -20,6 +20,16 @@ class User {
     }
 
 
+    hideModal() {
+        const closeModal = document.querySelector('.close-btn')
+
+        closeModal.addEventListener('click', () => {
+            showModal.style.opacity = '0'
+            showModal.style.visibility = 'hidden'
+        })
+    }
+
+
     showRepositories(id, avatar, login, url) {
         const cart = {
             id, avatar, login, url
@@ -27,11 +37,15 @@ class User {
         showRepos.render(cart)
 
         const showModal = document.querySelector('.modal')
-        const closeModal = document.querySelector('.close-btn')
-
         showModal.style.opacity = '1'
         showModal.style.visibility = 'visible'
+
+
+    }
+    hideModal() {
+        const closeModal = document.querySelector('.close-btn')
         closeModal.addEventListener('click', () => {
+            const showModal = document.querySelector('.modal')
             showModal.style.opacity = '0'
             showModal.style.visibility = 'hidden'
         })
@@ -47,7 +61,6 @@ class User {
         const prevPageBtn = document.querySelector('.prev-page')
         const nextPageBtn = document.querySelector('.next-page')
         const usersStore = localStorageUtil.getUsers()
-
 
         const obj = {
             name: '',
