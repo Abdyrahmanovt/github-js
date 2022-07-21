@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.header__logo {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 29px;
+    line-height: 40px;
+    text-align: center;
+    color: #000000;
+}
+
+.btn-color {
+    background: grey;
+}
+
+.btn__color--active {
+    background-color: red;
+}
+
+.modal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 20px 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-content {
+    width: 70%;
+    height: 70%;
+    background-color: #ddd;
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 5px;
+    max-height: 100%;
+    overflow-y: auto;
+
+}
+
+
+
